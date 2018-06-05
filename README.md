@@ -27,4 +27,25 @@ before I start in on too much actual coding. The spec for the .lost files (just 
 text file, but containing data to be read by TheLostRPG engine) is the first thing that
 I need to finalize. I think I will separate the sections (items, monsters, etc.) with
 a header and will support the listing of these sections sequentially in a single file or
-their separation into numerous files contained within a directory. 
+their separation into numerous files contained within a directory.
+
+**UPDATE:** I think that I will just use .toml files for the game configuration. I will still
+need to enumerate all of the fields and the information that needs to be encoded within
+them, but I don't think I need to take on the task of creating a redundant format as well.
+TOML is a syntax light and easy to read markup language so it's certainly more user friendly
+than writing the data in either LISP format or some other markup language that is more
+verbose like JSON.
+
+I still plan on allowing directory loading as the TOML can easily and logically be broken up
+into several files by `[table]`.
+
+### TheLostRPG Description Format
+
+See the `game.toml` file for a basic game description with annotations.
+
+###### Notes:
+* Have two descriptions of a path? One for looking at it an another that displays while
+traversing it?
+* I still need to figure out how I am going to pull off inheritance in a toml file. It
+will likely just be in the form of a "parent" field the references a character or item
+define in another part of the toml.

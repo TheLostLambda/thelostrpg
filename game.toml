@@ -1,0 +1,42 @@
+# This is the name of the video game!
+title = "The Library"
+
+# This master table contains a map of the entire world
+[world]
+  # This subtable describes a specific stage within the world.
+  [world.the_antechamber]
+    # This is the textual description of this stage
+    description = """Here is an epic, \
+                     multiline description \
+                     of this part of the world!\
+                     """
+    # Here is an array of tables, each table describes an edge (a path) that
+    # branches out from this location.
+    [[edges]]
+    # This is the direction the player must walk to take this path. It can be any
+    # number of directions: UPSTAIRS, NORTH, STRAIGHT, LEFT, TOWARDS THE LIGHT, etc.
+    direction = "NORTH"
+    # A short description of this path
+    description = "This is what this path looks like!"
+    # This is the stage to which the path links
+    link = "the_lobby"
+    # Here is a second edge
+    [[edges]]
+    direction = "SOUTH"
+    description = "This seems to be the way outside!"
+    link = "the_void"
+
+  [world.the_lobby]
+    description = "What a beautiful lobby! Tons of stuff everywhere!"
+    [[edges]]
+    direction = "SOUTH"
+    description = "This takes you back to the antechamber"
+    link = "the_antechamber"
+
+# This table keeps track of items
+[items]
+  # Implement me...
+
+# This table tracks NPCs and players
+[characters]
+  # Implement me...
