@@ -48,4 +48,4 @@ See the `game.toml` file for a basic game description with annotations.
 traversing it?
 * I still need to figure out how I am going to pull off inheritance in a toml file. It
 will likely just be in the form of a "parent" field the references a character or item
-define in another part of the toml.
+defined in another part of the toml.
