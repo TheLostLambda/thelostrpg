@@ -14,23 +14,23 @@ title = "The Library"
     # branches out from this location.
     [[world.the_antechamber.edges]]
     # This is the direction the player must walk to take this path. It can be any
-    # number of directions: UPSTAIRS, NORTH, STRAIGHT, LEFT, TOWARDS THE LIGHT, etc.
-    direction = "NORTH"
-    # A short description of this path
-    description = "This is what this path looks like!"
+    # number of directions: UPSTAIRS LADDER, NORTH WINDOW, STRAIGHT AHEAD, LEFT DOOR, TOWARDS THE LIGHT, etc.
+    direction = "NORTH DOOR"
+    # A short description of this path. It should fit grammatically with the direction. Ex: The NORTH PASSAGEWAY "is full of cobwebs"
+    description = "is rusted shut!"
     # This is the stage to which the path links
     link = "the_lobby"
     # Here is a second edge
     [[world.the_antechamber.edges]]
-    direction = "SOUTH"
-    description = "This seems to be the way outside!"
+    direction = "SOUTH DOOR"
+    description = "seems to be the way outside!"
     link = "the_void"
 
   [world.the_lobby]
     description = "What a beautiful lobby! Tons of stuff everywhere!"
     [[world.the_lobby.edges]]
-    direction = "SOUTH"
-    description = "This takes you back to the antechamber"
+    direction = "SOUTH DOOR"
+    description = "takes you back to the antechamber."
     link = "the_antechamber"
 
 # This table keeps track of items

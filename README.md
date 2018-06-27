@@ -49,3 +49,4 @@ traversing it?
 * I still need to figure out how I am going to pull off inheritance in a toml file. It
 will likely just be in the form of a "parent" field the references a character or item
 defined in another part of the toml.
+* Use buildapp to create an executable from sbcl when all is said and done.
